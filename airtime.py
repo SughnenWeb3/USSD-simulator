@@ -3,10 +3,10 @@ Welcome to Our Service🤗:
 Please Dial *555*78# to continue
 """)
 print()
-ussd = "*555*78#"
+ussd = 1
 balance = 1000
 
-dialer = input("Enter USSD: ")
+dialer = int(input("Enter USSD: "))
 if dialer == ussd:
 	print("""
 Select the operation to carry out.
@@ -73,7 +73,7 @@ Select the operation to carry out.
 		""")
 		option = int(input("Select choice: "))
 		if option ==1:
-			current_balance = 0
+		#	current_balance = 0
 			air_borrow = float(input("Enter amount to borrow: "))
 			if air_borrow > 1000:
 				print("You cannot borrow above 1000")
@@ -85,8 +85,8 @@ Select the operation to carry out.
 				print(f"You have borrowed {air_borrow} and you have been charged {percentage}% and your current balance is {new_balance}")
 			elif air_borrow >= 100 and air_borrow <= 650:
 				percentage = 10
-				current_balance = (percentage/10) * air_borrow
-				new_balance = air_borrow - current
+				current_balance = (percentage/100) * air_borrow
+				new_balance = air_borrow - current_balance
 				print(f"You have borrowed {air_borrow} and you have been charged {percentage}% and your current balance is {new_balance}")
 			else:
 				air_borrow <100
@@ -108,13 +108,13 @@ Select the operation to carry out.
 				rate = 700
 				percentage = 10
 				refund = rate + (percentage/100)
-				print(f"You have borrowed {data_to_borrow} of data and you have been charged {percentage}% and the amount to refund is {refund}")
+				print(f"You have borrowed {data_to_borrow}GB of data and you have been charged {percentage}% and the amount to refund is {refund}")
 
 			elif data_to_borrow ==3:
 				rate = 400
 				percentage = 5
 				refund = rate + (percentage/100)
-				print(f"You have borrowed {data_to_borrow} of data and you have been charged {percentage}% and the amount to refund is {refund}")
+				print(f"You have borrowed {data_to_borrow}GB of data and you have been charged {percentage}% and the amount to refund is {refund}")
 
 			else:
 				print("Option is unavailable")

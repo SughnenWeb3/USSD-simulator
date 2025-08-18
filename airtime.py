@@ -1,9 +1,9 @@
 print("""
 Welcome to Our Service🤗: 
-Please Dial *555*78# to continue
+Please Dial *555# to continue
 """)
 print()
-ussd = "*555*78#"
+ussd = "*555#"
 balance = 1000
 
 dialer = input("Enter USSD: ")

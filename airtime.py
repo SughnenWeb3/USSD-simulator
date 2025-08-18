@@ -127,4 +127,4 @@ Select the operation to carry out.
 	
 
 else:
-	print("Invalid USSD")
+	print("Invalid USSD Code")

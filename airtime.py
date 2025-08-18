@@ -3,10 +3,10 @@ Welcome to Our Service🤗:
 Please Dial *555*78# to continue
 """)
 print()
-ussd = 1
+ussd = "*555*78#"
 balance = 1000
 
-dialer = int(input("Enter USSD: "))
+dialer = input("Enter USSD: ")
 if dialer == ussd:
 	print("""
 Select the operation to carry out.

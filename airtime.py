@@ -18,8 +18,6 @@ Select the operation to carry out.
 """)
 
 	operation = int(input("Enter operation: "))
-	#if operation <0 and operation >5:
-	#print("Operation must be between 1-5")
 	if operation == 1:
 		airtime = float(input("Enter the amount to recharge: "))
 		amt_to_recharge = balance - airtime
